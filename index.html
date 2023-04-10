@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de prezentare</title>
+    <style>
+      /* Stiluri CSS pentru pagina de prezentare */
+      body {
+        background-color: whitesmoke;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+      }
+      nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+      }
+      nav li {
+        margin-right: 20px;
+      }
+      nav li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+      nav li a:hover {
+        color: #ccc;
+      }
+      #hero-section {
+        background-image: 
+        background-size: cover;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      #hero-section h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+        color: #fff;
+        text-shadow: 1px 1px #333;
+      }
+      #hero-section p {
+        font-size: 24px;
+        margin-bottom: 40px;
+        color: #fff;
+        text-shadow: 1px 1px #333;
+      }
+      .cta-button {
+        display: inline-block;
+        background-color: #f00;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+      }
+      .cta-button:hover {
+        background-color: #d00;
+      }
+      #about-section {
+        background-color: #f0f0f0;
+        padding: 40px;
+      }
+      #about-section h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #333;
+      }
+      #about-section p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 40px;
+        color: #555;
+        text-align: justify;
+      }
+      #services-section {
+        background-color: #fff;
+        padding: 40px;
+      }
+      #services-section h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #333;
+      }
+      #services-section ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      #services-section li {
+        width: calc(33.33% - 20px);
+        margin-bottom: 40px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        box-sizing: border
+          -box;
+    transition: box-shadow .3s ease-in-out;
+  }
+  #services-section li:hover {
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  }
+  #services-section h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color:black;
+  }
+  #services-section p {
+    font-size: 18px;
+    margin-bottom: 0;
+    color:black;
+    line-height: 1.5;
+  }
+  #contact-section {
+    background-color #eee;
+    padding: 40px;
+  }
+  #contact-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color:black;
+  }
+  #contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  #contact-form input[type="text"], #contact-form input[type="email"], #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+  }
+  #contact-form textarea {
+    height: 150px;
+  }
+  #contact-form input[type="submit"] {
+    background-color:red;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  #contact-form input[type="submit"]:hover {
+    background-color: #d00;
+  }
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  footer p {
+    margin: 0;
+  }
+</style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Acasă</a></li>
+          <li><a href="index (2).HTML">Despre noi</a></li>
+          <li><a href="index (3).html">Servicii</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="hero-section">
+      <div>
+        <h1>Bine ați venit la Pagina de prezentare!</h1>
+        <p>Aici găsiți informații despre serviciile noastre și cum vă putem ajuta.</p>
+        <a href="#" class="cta-button">Aflați mai multe</a>
+      </div>
+    </section>
+    <section id="about-section">
+      <div>
+        <h2>Despre noi</h2>
+        <img src="poza1.jpg">
+        <img src="poza3.jpg" style="width:600px;height:337px;">
+        <img src="poza2.jpg"style=";height:337px;"">
+        <p>Noi suntem o companie specializată în furnizarea de soluții software personalizate. Echipa noastră de experți vă poate ajuta să dezvoltați și să implementați soluții software adaptate nevoilor dumneavoastră.</p>
+      </div>
+    </section>
+    <section id="services-section">
+      <div>
+        <h2>Serviciile noastre</h2>
+        <ul>
+          <li>
+            <h3>Dezvoltare de soluții software</h3>
+            <img src="poza4.jpg" style="width:590px;height:337px;">
+<p>Colaborăm cu clienții noștri pentru a dezvolta soluții software personalizate care să îndeplinească cerințele specifice ale afacerii lor. De la dezvoltarea de aplicații web și mobile la soluții de automatizare a proceselor de afaceri, suntem aici pentru a vă ajuta.</p>
+</li>
+<li>
+<h3>Suport tehnic</h3>
+<img src="poza5.jpg" style="width:590px;height:337px;">
+<p>Oferim suport tehnic pentru soluțiile software dezvoltate de noi, astfel încât afacerea dumneavoastră să funcționeze fără probleme. De la întreținerea aplicațiilor existente la dezvoltarea de noi funcționalități, suntem mereu acolo pentru a vă ajuta.</p>
+</li>
+<li>
+<h3>Găzduire web</h3>
+<img src="poza6.jpg" style="width:590px;height:337px;">
+
+<p>Pe lângă dezvoltarea soluțiilor software, oferim și servicii de găzduire web. Avem servere rapide și sigure care asigură uptime-ul maxim al site-urilor web ale clienților noștri.</p>
+</li>
+</ul>
+</div>
+</section>
+<section id="contact-section">
+<h2>Contactați-ne</h2>
+<div id="contact-form">
+<form>
+<input type="text" name="name" placeholder="Nume">
+<input type="email" name="email" placeholder="Adresă de email">
+<textarea name="message" placeholder="Mesaj"></textarea>
+<input type="submit" value="Trimiteți">
+</form>
+</div>
+</section>
+<footer>
+<p>© 2023 Pagina de prezentare. Toate drepturile rezervate.</p>
+</footer>
+
+  </body>
+</html>

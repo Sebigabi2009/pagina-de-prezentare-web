@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Graficul tensiunii produse de generatorul de impuls de tensiune realizat pe baza schemei Marx</title>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+	<canvas id="myChart"></canvas>
+	<script>
+		var ctx = document.getElementById('myChart').getContext('2d');
+		var myChart = new Chart(ctx, {
+			type: 'line',
+			data: {
+				labels: ['0', '1e-8', '2e-8', '3e-8', '4e-8', '5e-8', '6e-8', '7e-8', '8e-8', '9e-8', '1e-7', '1.1e-7', '1.2e-7', '1.3e-7', '1.4e-7', '1.5e-7'],
+				datasets: [{
+					label: 'Tensiunea de impuls',
+					data: [],
+					fill: false,
+					borderColor: 'rgb(75, 192, 192)',
+					lineTension: 0.1
+				}]
+			},
+			options: {
+				scales: {
+					xAxes: [{
+						scaleLabel: {
+							display: true,
+							labelString: 'Timp (s)'
+						}
+					}],
+					yAxes: [{
+						scaleLabel: {
+							display: true,
+							labelString: 'Tensiune (kV)'
+						}
+					}]
+				}
+			}
+		});
+	</script>
+</body>
+
+var U0 = 70; // tensiunea de intrare
+var R1 = 0; // Ω
+var R2 = 1000; // Ω
+var R3 = 1000; // Ω
+var C1 = 10000; // pF
+var C2 = 1000; // pF
+var tau = C1 * C2 * (R1*R2 + R1*R3 + R2*R3) * 1e-12; // constanta de timp (s)
+var eta = (R1*C1 + R2*C2 + R2*C1 + R3*C2) / (C1*R2); // coeficientul eta
+var t = []; // vectorul de timp
+var v = []; // vectorul tensiunii
+for (var i = 0; i <= 15; i++) {
+	t[i] = i * tau * eta; // timpul (s)
+
+
